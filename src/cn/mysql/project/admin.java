@@ -122,7 +122,8 @@ Configuration cfg=new Configuration().configure();
     Student user=new Student();
     user.setId(Id);
 	user.setName(name);
-	user.setPassword(name);	
+	user.setPassword(name);
+	session.save(user);
 }
     else//add teacher
     {
@@ -130,6 +131,7 @@ Configuration cfg=new Configuration().configure();
     	user.setId(Id);
     	user.setName(name);
     	user.setPassword(name);
+    	session.save(user);
     }
     tx.commit();
    	session.close();
